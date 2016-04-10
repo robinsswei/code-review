@@ -87,6 +87,7 @@ namespace A6
                         // Cells[4]: Remaining Balance
                         remainingBalance = pv - monthlyPayment;
                         if(remainingBalance == 0.0){
+                            // set this cell's font color to RED
                             dataGridView1.Rows[index].Cells[4].style = new DataGridViewCellStyle { ForeColor = Color.Red };
                         }
                         dataGridView1.Rows[index].Cells[4].Value = remainingBalance.ToString("c");
