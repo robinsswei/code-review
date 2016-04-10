@@ -43,7 +43,7 @@ namespace A6
                 months = double.Parse(textBox3.Text);
 
                 // start calculation
-                if( months > 6 && months < 48 ){
+                if( months >= 6 && months <= 48 ){
                     // TO-DO: Please set a radioButton is Checked as intialization,
                     //        Change one of the radioButton's property.
                 
