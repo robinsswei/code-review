@@ -32,7 +32,7 @@ namespace A6
             while(keepWorking){
                 // Added code here
                 singlePay = 2 * singlePay;
-                
+
                 totalPay = totalPay + singlePay;
 
                 if(totalPay == 1000000){
@@ -45,5 +45,5 @@ namespace A6
             
         }
     }
-    }
+
 }
