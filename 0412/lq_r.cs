@@ -20,7 +20,8 @@ namespace A6
         private void button1_Click(object sender, EventArgs e)
         {
             // suppose single pay is $100/day
-            double singlePay = 100, 
+            //double singlePay = 100, 
+            double singlePay = 0.01,
                    totalPay = 0;
 
             // counting days       
@@ -29,6 +30,9 @@ namespace A6
             Boolean keepWorking = true;
 
             while(keepWorking){
+                // Added code here
+                singlePay = 2 * singlePay;
+                
                 totalPay = totalPay + singlePay;
 
                 if(totalPay == 1000000){
