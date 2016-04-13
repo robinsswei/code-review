@@ -25,7 +25,7 @@ namespace A6
                    totalPay = 0;
 
             // counting days       
-            int days = 0;
+            int days = 1;
 
             Boolean keepWorking = true;
 
@@ -35,12 +35,12 @@ namespace A6
 
                 totalPay = totalPay + singlePay;
 
-                if(totalPay == 1000000){
+                days++;
+
+                if(totalPay >＝ 1000000){
                     keepWorking = false;
                     MessageBox.Show("It takes" + days.ToString() + "days to accumlate 1 million dollars");
                 }
-
-                days++;
             }
             
         }
