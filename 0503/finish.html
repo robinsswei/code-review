@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greeting with Date</title>
+</head>
+<body>
+  <p id="greeting"></p>
+  <p id="curDate"></p>
+  <script type="text/javascript">
+    // 1. convert the date to Pacific Standard Time zone
+    var date = new Date();
+    date.setUTCHours(10);
+
+    // 2. set the content for <p id="curDate"></p> 
+    var $curDate = document.getElementById("curDate");
+    $curDate.innerHTML = "Current date and time is: " + date.toUTCString() + "-0800 (Pacific Standard Time)";
+
+    // 3. get the current hour
+    var hour = date.getUTCHours();
+
+    // 4. set the content for <p id="greeting"></p>
+    var $greeting = document.getElementById("greeting");
+    if(hour > 0 && hour <= 12){
+      $greeting.innerHTML = "Good Morning";
+      $greeting.setAttribute("style", "color: green"); 
+    }else if(hour>12 && hour<=17 ){
+      $greeting.innerHTML = "Good Afternoon";
+      $greeting.setAttribute("style", "color: red"); 
+    }else if(hour>17 && hour<=24){
+      $greeting.innerHTML = "Good Evening";
+      $greeting.setAttribute("style", "color: blue"); 
+    }
+  </script>
+</body>
+</html>
